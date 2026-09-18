@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #555;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 12px;
+        }
+
+        input, select, textarea {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 250px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="file"] {
+            width: auto;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 120px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 70%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        .media {
+            text-align: center;
+            margin: 30px;
+        }
+
+        pre {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>University Admission Form</h1>
+
+    <form>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </fieldset>
+
+
+        <!-- Contact Information -->
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            <br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"></textarea>
+        </fieldset>
+
+
+        <!-- Academic Information -->
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="marks">Previous Marks:</label>
+            <input type="number" id="marks" name="marks">
+            <br>
+
+            <label for="program">Preferred Program:</label>
+            <select id="program" name="program">
+                <option value="">Select Program</option>
+                <option value="bs_cs">BS Computer Science</option>
+                <option value="bs_it">BS Information Technology</option>
+                <option value="bs_se">BS Software Engineering</option>
+                <option value="bs_ai">BS Artificial Intelligence</option>
+            </select>
+        </fieldset>
+
+
+        <!-- Interests and Skills -->
+        <fieldset>
+            <legend>Interests / Skills</legend>
+
+            <input type="checkbox" name="skills" value="programming">
+            Programming
+
+            <input type="checkbox" name="skills" value="networking">
+            Networking
+
+            <input type="checkbox" name="skills" value="database">
+            Database
+
+            <input type="checkbox" name="skills" value="ai">
+            Artificial Intelligence
+        </fieldset>
+
+
+        <!-- Profile Picture -->
+        <fieldset>
+            <legend>Profile Picture</legend>
+
+            <label for="picture">Upload Image:</label>
+            <input type="file" id="picture" name="picture" accept="image/*">
+        </fieldset>
+
+
+        <!-- Additional Information -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="reason">Why do you want to join the university?</label>
+            <br><br>
+
+            <textarea id="reason" name="reason"
+                placeholder="Write your reason here..."></textarea>
+        </fieldset>
+
+
+        <!-- Form Buttons -->
+        <div class="buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+
+
+    <!-- Student Information Table -->
+    <h2>Student Information</h2>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+
+        <tr>
+            <td>Ali</td>
+            <td>Khan</td>
+            <td>ali@gmail.com</td>
+            <td>Computer Science</td>
+        </tr>
+
+        <tr>
+            <td>Ahmed</td>
+            <td>Shah</td>
+            <td>ahmed@gmail.com</td>
+            <td>Information Technology</td>
+        </tr>
+
+        <tr>
+            <td>Usman</td>
+            <td>Ali</td>
+            <td>usman@gmail.com</td>
+            <td>Software Engineering</td>
+        </tr>
+
+        <tr>
+            <td>Hamza</td>
+            <td>Khan</td>
+            <td>hamza@gmail.com</td>
+            <td>Artificial Intelligence</td>
+        </tr>
+
+        <tr>
+            <td>Bilal</td>
+            <td>Ahmad</td>
+            <td>bilal@gmail.com</td>
+            <td>Computer Science</td>
+        </tr>
+    </table>
+
+
+    <!-- Video and Audio -->
+    <div class="media">
+        <h2>University Introduction</h2>
+
+        <video width="500" controls>
+            <source src="university.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <br><br>
+
+        <audio controls>
+            <source src="university-audio.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+
+    <!-- Display HTML Code -->
+    <h2>Complete HTML Code</h2>
+
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;University Admission Form&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;University Admission Form&lt;/h1&gt;
+
+    &lt;form&gt;
+        Personal Information
+        Contact Information
+        Academic Information
+        Interests / Skills
+        Profile Picture
+        Additional Information
+
+        &lt;input type="submit" value="Submit"&gt;
+        &lt;input type="reset" value="Reset"&gt;
+    &lt;/form&gt;
+
+    &lt;h2&gt;Student Information&lt;/h2&gt;
+
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Email&lt;/th&gt;
+            &lt;th&gt;Department&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;video controls&gt;
+        &lt;source src="university.mp4" type="video/mp4"&gt;
+    &lt;/video&gt;
+
+    &lt;audio controls&gt;
+        &lt;source src="university-audio.mp3" type="audio/mpeg"&gt;
+    &lt;/audio&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+</body>
+</html>
